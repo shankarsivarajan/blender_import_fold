@@ -2,7 +2,7 @@ bl_info = {
   "name": "Origami FOLD",
   "author": "Shankar Sivarajan",
   "blender": (2,93,0),
-  "version": (0, 0, 1),
+  "version": (0, 0, 2),
   "location": "File > Import-Export",
   "description": "Import origami .fold files",
   "category": "Import-Export",
@@ -27,9 +27,9 @@ class ImportOrigami(bpy.types.Operator, ImportHelper):
   
     filename_ext = ".fold";
   
-    filepath = bpy.props.StringProperty(subtype="FILE_PATH")
+    filepath: bpy.props.StringProperty(subtype="FILE_PATH")
   
-    filter_glob = bpy.props.StringProperty(
+    filter_glob: bpy.props.StringProperty(
         default="*.fold",
         options={"HIDDEN"},
     )
